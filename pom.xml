@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -14,15 +14,15 @@
          Executa o programa exemplo
     -->
 
-    <groupId>com.github.kyriosdata</groupId>
-    <artifactId>exemplo</artifactId>
+    <groupId>br.ufg.inf.cs.sampaiodias</groupId>
+    <artifactId>calcular</artifactId>
     <packaging>jar</packaging>
     <version>1.0.0</version>
 
-    <name>com.github.kyriosdata:exemplo</name>
+    <name>br.ufg.inf.cs.sampaiodias.calcular:Calcular</name>
 
     <description>
-        Projeto de referência (exemplo) inicial de desenvolvimento em Java com uso de JUnit.
+        Calcular (Parser).
     </description>
 
     <url>https://github.com/kyriosdata/exemplo</url>
@@ -46,18 +46,18 @@
 
     <developers>
         <developer>
-            <id>kyriosdata</id>
-            <name>Fábio Nogueira de Lucena</name>
-            <email>fabio@inf.ufg.br</email>
+            <id>sampaiodias</id>
+            <name>Lucas Sampaio Dias</name>
+            <email>lucassampaiodias@gmail.com</email>
             <organization>Instituto de Informática (UFG)</organization>
             <organizationUrl>http://www.inf.ufg.br</organizationUrl>
         </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/kyriosdata/exemplo.git</connection>
-        <developerConnection>scm:git:https://github.com/kyriosdata/exemplo.git</developerConnection>
-        <url>https://github.com/kyriosdata/exemplo</url>
+        <connection>scm:git:https://github.com/sampaiodias/cs201602-aula11.git</connection>
+        <developerConnection>scm:git:https://github.com/sampaiodias/cs201602-aula11.git</developerConnection>
+        <url>https://github.com/sampaiodias/cs201602-aula11.git</url>
     </scm>
 
     <properties>
@@ -71,6 +71,12 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+
+	<dependency>
+            <groupId>com.github.kyriosdata.parser</groupId>
+            <artifactId>parser</artifactId>
+            <version>1.0.2</version>
+	</dependency>
 
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -89,7 +95,7 @@
     <build>
 
         <!-- Define o nome do arquivo a ser gerado (.jar é acrescentada) -->
-        <finalName>Exemplo</finalName>
+        <finalName>Calcular</finalName>
 
         <plugins>
 
@@ -101,10 +107,10 @@
                 <version>1.1.10</version>
                 <configuration>
                     <targetClasses>
-                        <param>com.github.kyriosdata.exemplo.Calendario</param>
+                        <param>br.ufg.inf.cs.sampaiodias.calcular.Calcular</param>
                     </targetClasses>
                     <targetTests>
-                        <param>com.github.kyriosdata.exemplo.*</param>
+                        <param>br.ufg.inf.cs.sampaiodias.calcular.*</param>
                     </targetTests>
                 </configuration>
             </plugin>
@@ -149,7 +155,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>jars/</classpathPrefix>
-                            <mainClass>com.github.kyriosdata.exemplo.ProgramaCalendario</mainClass>
+                            <mainClass>br.ufg.inf.cs.sampaiodias.calcular.Calcular</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

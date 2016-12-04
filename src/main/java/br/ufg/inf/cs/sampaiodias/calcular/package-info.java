@@ -9,4 +9,4 @@
  * @see com.github.kyriosdata.exemplo.Calendario
  * @see com.github.kyriosdata.exemplo.ProgramaCalendario
  */
-package com.github.kyriosdata.exemplo;
+package br.ufg.inf.cs.sampaiodias.calcular;
